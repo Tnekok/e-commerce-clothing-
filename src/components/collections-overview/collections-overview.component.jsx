@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { selectCollections } from '../../redux/shop/shop.selectors';
+import { selectCollectionsFormPreview } from '../../redux/shop/shop.selectors';
 
 import './collections-overview.styles.scss';
 import CollectionPreview from '../collection-preview/collection-preview.component';
@@ -19,7 +19,7 @@ const CollectionsOverview = ({ collections }) => (
 );
 
 const mapStateToProps = createStructuredSelector({
-    collections: selectCollections
+    collections: selectCollectionsFormPreview
 });
 
 export default connect(mapStateToProps)(CollectionsOverview);
